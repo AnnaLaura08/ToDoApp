@@ -1,10 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { TextInput } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Text style={styles.text}>Olá, seja bem-vindo!</Text>
+      <TextInput placeholder="Digite algo..." style={styles.TextInput} />
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}>Clique aqui</Text>
+      </TouchableOpacity>
     <View style={styles.cor1}></View>
     <View style={styles.cor2}></View>
     <View style={styles.cor3}></View>
@@ -19,6 +24,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     flexDirection: 'row',
+    fontWeight: 'bold',
   },
   cor1: {
     width: 100,
@@ -34,5 +40,29 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     backgroundColor: 'blue',
+  },
+  text: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+  TextInput: {
+    width: 200,
+    height: 50,
+    borderColor: 'black',
+    borderWidth: 1,
+    margin: 10,
+  },
+  button: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    margin: 10,
+  },
+  buttonText: {
+    width: 50,
+    height: 50,
+    backgroundColor: 'blue',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });
